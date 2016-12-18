@@ -50,7 +50,7 @@ router.get('/an-listofequation', function(req, res) {
 	]
 	*/
 
-    var arr = [
+    var arr = {"listOfCals":[
         {
             "type":"Simple Interest",
             "action":"com.devcli.finance_eq.calculator.SimpleInterest",
@@ -70,10 +70,10 @@ router.get('/an-listofequation', function(req, res) {
             "descriptions":"Loan Calculator Equation<br />APV=PMTi[1−1(1+i)n]PV=PMTi[1−1(1+i)n] <br />Where:<PV is the loan amount<br \>PMT is the monthly payment<br \>i is the interest rate per month in decimal form (interest rate percentage divided by 12)<br \>n is the number of months (term of the loan in months)",
             "frequency" :["Months","Year"]
         }
-    ];
+    ]};
 
 
-	res.send(200,arr);
+    res.status(200).send(arr);
 });
 
 
